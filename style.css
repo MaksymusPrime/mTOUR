@@ -65,7 +65,14 @@
     font-weight: 500;
     margin-left: 30px;
     text-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border: 1px solid transparent;
+    transition: color .7s ease-in-out, box-shadow .3s ease-in-out;
 }
+
+.navbar a:hover {
+    box-shadow: inset 120px 0 0 0 #fff;
+    color: #444;
+    }
 
 .banner {
     position: relative;
