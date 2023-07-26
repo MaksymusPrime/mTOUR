@@ -78,6 +78,8 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
+
 }
 
 .slider .slide {
@@ -106,7 +108,16 @@
     left: 0;
     width: 50%;
     height: 100%;
+    transform: translateX(-100%);
+    transition: 0s;
    }
+
+   .slide.active .left-info {
+    transform: translateX(0);
+    z-index: 1;
+    transition: .7s ease;
+   }
+
 
 .left-info .penetrte-blur {
     position: absolute;
@@ -120,6 +131,7 @@
     -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
     -webkit-mask-clip: text, padding-box;
     -webkit-mask-composite: xor;
+    padding-right: 10px;
 }
 
 .penetrte-blur h1 {
@@ -171,7 +183,15 @@
     height: 100%;
     display: flex;
    align-items: center;
+   transform: translateX(100%);
+   transition: 0s;
 }
+
+.slide.active .right-info {
+    transform: translateX(0);
+    z-index: 1;
+    transition: .7s ease;
+} 
 
 .right-info h1 {
     font-size: 250px;

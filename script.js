@@ -7,7 +7,7 @@ let slideNumber = 0;
 //slider next button
 nextBtn.onclick = () => {
     slides.forEach((slide) => {
-        slide.classlist.remove('active');
+        slide.classList.remove('active');
     });
 
     slideNumber++;
@@ -23,7 +23,7 @@ nextBtn.onclick = () => {
 
 prevBtn.onclick = () => {
     slides.forEach((slide) => {
-        slide.classlist.remove('active');
+        slide.classList.remove('active');
     });
 
     slideNumber--;
